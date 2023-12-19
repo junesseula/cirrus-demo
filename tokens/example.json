@@ -3,12 +3,18 @@
     "button-example-bg-test": {
       "value": "#14B8A6",
       "type": "color"
+    },
+    "another-one": {
+      "value": "#000000",
+      "type": "color"
     }
   },
+  "Global Variables": {},
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
-      "Example Set"
+      "Example Set",
+      "Global Variables"
     ]
   }
 }
