@@ -1,5 +1,10 @@
 {
-  "Example Set": {},
+  "Example Set": {
+    "button-example-bg-test": {
+      "value": "#14B8A6",
+      "type": "color"
+    }
+  },
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
