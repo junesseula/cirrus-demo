@@ -1,0 +1,20 @@
+{
+  "button-example-bg-test": {
+    "value": "#14B8A6",
+    "type": "color"
+  },
+  "another-one": {
+    "value": "#000000",
+    "type": "color"
+  },
+  "tokenSetOrder": {
+    "0": {
+      "value": "Example Set",
+      "type": "other"
+    },
+    "1": {
+      "value": "Global Variables",
+      "type": "other"
+    }
+  }
+}
