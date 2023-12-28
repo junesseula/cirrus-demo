@@ -15,13 +15,23 @@
         "description": "minimum width for a card component"
       },
       "cardWmax": {
-        "value": "{bodyTextMax} +16*2",
+        "value": "{sizing.bodyTextMax} +16*2",
+        "type": "sizing"
+      },
+      "bodyTextMax": {
+        "value": "768",
         "type": "sizing"
       }
     },
-    "bodyTextMax": {
-      "value": "768",
-      "type": "sizing"
+    "radius": {
+      "m": {
+        "value": "16",
+        "type": "borderRadius"
+      }
+    },
+    "canvas": {
+      "value": "#fcfaf4",
+      "type": "color"
     }
   },
   "Global Variables": {},
