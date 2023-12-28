@@ -7,6 +7,21 @@
     "another-one": {
       "value": "#FFFFFF",
       "type": "color"
+    },
+    "sizing": {
+      "cardWmin": {
+        "value": "540",
+        "type": "sizing",
+        "description": "minimum width for a card component"
+      },
+      "cardWmax": {
+        "value": "{bodyTextMax} +16*2",
+        "type": "sizing"
+      }
+    },
+    "bodyTextMax": {
+      "value": "768",
+      "type": "sizing"
     }
   },
   "Global Variables": {},
