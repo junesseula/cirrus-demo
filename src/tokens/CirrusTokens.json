@@ -678,14 +678,14 @@
           "value": "{paragraph-spacing.scaled.base}*125",
           "type": "paragraphSpacing"
         },
+        "150": {
+          "value": "{paragraph-spacing.scaled.base}*150",
+          "type": "paragraphSpacing"
+        },
         "base": {
-          "value": "{paragraph-spacing.REM}/100",
+          "value": "{size.scale} * 1/100",
           "type": "paragraphSpacing"
         }
-      },
-      "REM": {
-        "value": "16",
-        "type": "paragraphSpacing"
       }
     },
     "line-height": {
@@ -695,6 +695,14 @@
       },
       "125": {
         "value": "125%",
+        "type": "lineHeights"
+      },
+      "150": {
+        "value": "150%",
+        "type": "lineHeights"
+      },
+      "200": {
+        "value": "200%",
         "type": "lineHeights"
       }
     },
