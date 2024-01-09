@@ -746,6 +746,10 @@
         "purpler-lighter": {
           "value": "{color.purple.30}",
           "type": "color"
+        },
+        "lightest": {
+          "value": "{color.purple.10}",
+          "type": "color"
         }
       },
       "agnostic": {
@@ -991,6 +995,23 @@
               "space": "lch"
             }
           }
+        }
+      },
+      "test": {
+        "primary": {
+          "value": "{brand.neutral.lightest}",
+          "type": "color",
+          "description": "cards, form, default"
+        },
+        "secondary": {
+          "value": "{brand.neutral.light}",
+          "type": "color",
+          "description": "input fields, dark table row"
+        },
+        "tertiary": {
+          "value": "{brand.neutral.medium-light}",
+          "type": "color",
+          "description": "messaging, accordion, table header portal"
         }
       }
     },
