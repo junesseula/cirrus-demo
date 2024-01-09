@@ -728,6 +728,10 @@
         "default-lighter": {
           "value": "{color.fushcia.10}",
           "type": "color"
+        },
+        "default-lightest": {
+          "value": "{color.fushcia.0}",
+          "type": "color"
         }
       },
       "secondary": {
@@ -789,8 +793,12 @@
           "value": "{color.grey.70}",
           "type": "color"
         },
-        "medium": {
+        "medium-dark": {
           "value": "{color.grey.40}",
+          "type": "color"
+        },
+        "medium": {
+          "value": "{color.grey.35}",
           "type": "color"
         },
         "medium-light": {
@@ -825,7 +833,7 @@
         "type": "color"
       },
       "lighter": {
-        "value": "{color.yellow.0}",
+        "value": "{color.yellow.10}",
         "type": "color"
       }
     },
@@ -838,12 +846,16 @@
         "value": "{color.red.60}",
         "type": "color"
       },
-      "light": {
+      "medium": {
         "value": "{color.red.30}",
         "type": "color"
       },
-      "lighter": {
+      "light": {
         "value": "{color.red.20}",
+        "type": "color"
+      },
+      "lighter": {
+        "value": "{color.red.10}",
         "type": "color"
       },
       "lightest": {
@@ -939,92 +951,12 @@
     }
   },
   "mapped/ light (UI)": {
-    "surface": {
-      "input-default": {
-        "value": "{brand.neutral.light}",
-        "type": "color"
-      },
-      "input-light": {
-        "value": "{brand.neutral.lightest}",
-        "type": "color"
-      },
-      "input-disabled": {
-        "value": "{brand.neutral.medium}",
-        "type": "color"
-      },
-      "canvas": {
-        "value": "{canvas.canvas}",
-        "type": "color"
-      },
-      "table-header": {
-        "value": "{brand.neutral.medium-light}",
-        "type": "color"
-      },
-      "table-row-light": {
-        "value": "{brand.neutral.lightest}",
-        "type": "color"
-      },
-      "table-row-dark": {
-        "value": "{brand.neutral.light}",
-        "type": "color"
-      },
-      "dropdown-hover": {
-        "value": "{brand.neutral.medium}",
-        "type": "color"
-      },
-      "error": {
-        "value": "{error.lightest}",
-        "type": "color"
-      },
-      "card": {
-        "value": "{brand.neutral.lightest}",
-        "type": "color"
-      },
-      "agnostic-button": {
-        "value": "{brand.agnostic.blue-default}",
-        "type": "color"
-      },
-      "agnostic-button-hover": {
-        "value": "{brand.agnostic.blue-default}",
-        "type": "color",
-        "$extensions": {
-          "studio.tokens": {
-            "modify": {
-              "type": "darken",
-              "value": "0.2",
-              "space": "lch"
-            }
-          }
-        }
-      },
-      "test": {
-        "primary": {
-          "value": "{brand.neutral.lightest}",
-          "type": "color",
-          "description": "cards, form, default"
-        },
-        "secondary": {
-          "value": "{brand.neutral.light}",
-          "type": "color",
-          "description": "input fields, dark table row"
-        },
-        "tertiary": {
-          "value": "{brand.neutral.medium-light}",
-          "type": "color",
-          "description": "messaging, accordion, table header portal"
-        }
-      }
-    },
     "text": {
       "default": {
         "value": "{brand.neutral.darker}",
         "type": "color"
       },
-      "prompt": {
-        "value": "{brand.neutral.dark}",
-        "type": "color"
-      },
-      "disabled": {
+      "secondary": {
         "value": "{brand.neutral.dark}",
         "type": "color"
       }
@@ -1055,8 +987,165 @@
         "type": "color"
       },
       "divider": {
-        "value": "{brand.neutral.medium}",
+        "value": "{brand.neutral.medium-dark}",
         "type": "color"
+      },
+      "brand-secondary": {
+        "value": "{brand.secondary.purple}",
+        "type": "color"
+      }
+    },
+    "surface": {
+      "primary": {
+        "value": "{brand.neutral.lightest}",
+        "type": "color",
+        "description": "Grey-0 cards, form, default"
+      },
+      "secondary": {
+        "value": "{brand.neutral.light}",
+        "type": "color",
+        "description": "Grey-15. input fields, dark table row"
+      },
+      "tertiary": {
+        "value": "{brand.neutral.medium-light}",
+        "type": "color",
+        "description": "Grey-25. messaging, accordion, table header portal"
+      },
+      "hover": {
+        "value": "{brand.neutral.medium}",
+        "type": "color",
+        "description": "Grey-35"
+      },
+      "disabled": {
+        "value": "{brand.neutral.medium-dark}",
+        "type": "color",
+        "description": "Grey-40"
+      },
+      "canvas": {
+        "value": "{canvas.canvas}",
+        "type": "color"
+      },
+      "brand-highlight": {
+        "value": "{brand.secondary.lightest}",
+        "type": "color"
+      },
+      "brand-highlight-hover": {
+        "value": "{brand.secondary.purpler-lighter}",
+        "type": "color"
+      },
+      "brand-action": {
+        "value": "{brand.secondary.purple}",
+        "type": "color"
+      },
+      "brand-action-hover": {
+        "value": "{brand.secondary.purple}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "0.2",
+              "space": "lch"
+            }
+          }
+        }
+      },
+      "agnostic-action": {
+        "value": "{brand.agnostic.blue-default}",
+        "type": "color"
+      },
+      "agnostic-action-hover": {
+        "value": "{brand.agnostic.blue-default}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "0.2",
+              "space": "lch"
+            }
+          }
+        }
+      },
+      "error": {
+        "value": "{error.lightest}",
+        "type": "color"
+      },
+      "focus": {
+        "value": "{brand.agnostic.blue-lightest}",
+        "type": "color"
+      },
+      "success": {
+        "value": "{success.lighter}",
+        "type": "color"
+      },
+      "warning": {
+        "value": "{warning.lighter}",
+        "type": "color"
+      },
+      "danger-light": {
+        "value": "{error.lighter}",
+        "type": "color"
+      },
+      "danger": {
+        "value": "{error.primary}",
+        "type": "color"
+      },
+      "danger-hover": {
+        "value": "{error.primary}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "0.2",
+              "space": "lch"
+            }
+          }
+        }
+      },
+      "platform-header": {
+        "value": "{brand.neutral.lighter}",
+        "type": "color",
+        "description": "Grey-10"
+      },
+      "tag": {
+        "light": {
+          "neutral": {
+            "value": "{brand.neutral.medium}",
+            "type": "color"
+          },
+          "green": {
+            "value": "{success.lighter}",
+            "type": "color"
+          },
+          "warning": {
+            "value": "{warning.light}",
+            "type": "color"
+          },
+          "danger": {
+            "value": "{error.light}",
+            "type": "color"
+          },
+          "purple": {
+            "value": "{brand.secondary.purpler-lighter}",
+            "type": "color"
+          },
+          "blue": {
+            "value": "{brand.agnostic.blue-lighter}",
+            "type": "color"
+          },
+          "fushcia": {
+            "value": "{brand.primary.default-lightest}",
+            "type": "color"
+          }
+        },
+        "saturated": {
+          "neutral": {
+            "value": "{brand.neutral.dark}",
+            "type": "color"
+          }
+        }
       }
     }
   },
