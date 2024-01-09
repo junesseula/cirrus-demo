@@ -1512,19 +1512,19 @@
         "type": "color"
       },
       "brand-highlight": {
-        "value": "{brand.secondary.lightest}",
+        "value": "{brand.primary.lightest}",
         "type": "color"
       },
       "brand-highlight-hover": {
-        "value": "{brand.secondary.lighter}",
+        "value": "{brand.primary.lighter}",
         "type": "color"
       },
       "brand-action": {
-        "value": "{brand.secondary.medium}",
+        "value": "{brand.primary.medium}",
         "type": "color"
       },
       "brand-action-hover": {
-        "value": "{brand.secondary.medium}",
+        "value": "{brand.primary.medium}",
         "type": "color",
         "$extensions": {
           "studio.tokens": {
