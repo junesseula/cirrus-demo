@@ -1108,43 +1108,67 @@
         "value": "{brand.neutral.lighter}",
         "type": "color",
         "description": "Grey-10"
-      },
-      "tag": {
-        "light": {
-          "neutral": {
-            "value": "{brand.neutral.medium}",
-            "type": "color"
-          },
-          "green": {
-            "value": "{success.lighter}",
-            "type": "color"
-          },
-          "warning": {
-            "value": "{warning.light}",
-            "type": "color"
-          },
-          "danger": {
-            "value": "{error.light}",
-            "type": "color"
-          },
-          "purple": {
-            "value": "{brand.secondary.purpler-lighter}",
-            "type": "color"
-          },
-          "blue": {
-            "value": "{brand.agnostic.blue-lighter}",
-            "type": "color"
-          },
-          "fushcia": {
-            "value": "{brand.primary.default-lightest}",
-            "type": "color"
-          }
+      }
+    },
+    "tag": {
+      "light": {
+        "neutral": {
+          "value": "{brand.neutral.medium}",
+          "type": "color"
         },
-        "saturated": {
-          "neutral": {
-            "value": "{brand.neutral.dark}",
-            "type": "color"
-          }
+        "green": {
+          "value": "{success.lighter}",
+          "type": "color"
+        },
+        "warning": {
+          "value": "{warning.light}",
+          "type": "color"
+        },
+        "danger": {
+          "value": "{error.light}",
+          "type": "color"
+        },
+        "purple": {
+          "value": "{brand.secondary.purpler-lighter}",
+          "type": "color"
+        },
+        "blue": {
+          "value": "{brand.agnostic.blue-lighter}",
+          "type": "color"
+        },
+        "fushcia": {
+          "value": "{brand.primary.default-lightest}",
+          "type": "color"
+        }
+      },
+      "saturated": {
+        "neutral": {
+          "value": "{color.grey.80}",
+          "type": "color"
+        },
+        "green": {
+          "value": "{success.dark}",
+          "type": "color"
+        },
+        "warning": {
+          "value": "{warning.dark}",
+          "type": "color"
+        },
+        "danger": {
+          "value": "{boarder.error}",
+          "type": "color"
+        },
+        "purple": {
+          "value": "{brand.secondary.purple}",
+          "type": "color"
+        },
+        "blue": {
+          "value": "{brand.agnostic.blue-dark}",
+          "type": "color"
+        },
+        "fushcia": {
+          "value": "{brand.primary.default}",
+          "type": "color"
         }
       }
     }
