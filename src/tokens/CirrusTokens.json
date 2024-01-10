@@ -1757,7 +1757,7 @@
         "type": "color"
       },
       "active": {
-        "value": "{brand.primary.medium}",
+        "value": "{brand.agnostic.blue-light}",
         "type": "color"
       },
       "divider": {
@@ -1952,6 +1952,13 @@
         "type": "color"
       }
     },
+    "default": {
+      "value": {
+        "color": "{boarder.input-filled}",
+        "width": "1"
+      },
+      "type": "border"
+    },
     "focus": {
       "value": {
         "color": "{boarder.focus}",
@@ -1970,13 +1977,6 @@
       "value": {
         "color": "{boarder.success}",
         "width": "4"
-      },
-      "type": "border"
-    },
-    "default": {
-      "value": {
-        "color": "{boarder.input-filled}",
-        "width": "1"
       },
       "type": "border"
     }
