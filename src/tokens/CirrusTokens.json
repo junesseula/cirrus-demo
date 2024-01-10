@@ -1714,6 +1714,13 @@
         "width": "1"
       },
       "type": "border"
+    },
+    "divider": {
+      "value": {
+        "color": "{boarder.divider}",
+        "width": "1"
+      },
+      "type": "border"
     }
   },
   "mapped/dark": {
@@ -1977,6 +1984,13 @@
       "value": {
         "color": "{boarder.success}",
         "width": "4"
+      },
+      "type": "border"
+    },
+    "divider": {
+      "value": {
+        "color": "{boarder.divider}",
+        "width": "1"
       },
       "type": "border"
     }
