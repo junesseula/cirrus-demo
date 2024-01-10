@@ -2000,36 +2000,6 @@
     }
   },
   "mapped/mobile": {},
-  "component / text field": {
-    "comp": {
-      "textfield": {
-        "colour": {
-          "active": {
-            "bg": {
-              "value": "{global.color.selectable.grey-15.bg}",
-              "type": "color"
-            },
-            "prompt-text": {
-              "value": "{global.color.medium}",
-              "type": "color"
-            }
-          },
-          "disabled": {
-            "bg": {
-              "value": "{global.color.light}",
-              "type": "color"
-            }
-          },
-          "focused": {
-            "bg": {
-              "value": "{global.color.selectable.grey-15.bg}",
-              "type": "color"
-            }
-          }
-        }
-      }
-    }
-  },
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
@@ -2040,8 +2010,7 @@
       "mapped/ light",
       "mapped/dark",
       "mapped/large",
-      "mapped/mobile",
-      "component / text field"
+      "mapped/mobile"
     ]
   }
 }
