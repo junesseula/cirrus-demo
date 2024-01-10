@@ -1666,6 +1666,10 @@
         "value": "{neutral.darker}",
         "type": "color"
       },
+      "inverted": {
+        "value": "{neutral.lightest}",
+        "type": "color"
+      },
       "error": {
         "value": "{error.primary}",
         "type": "color"
@@ -1695,6 +1699,13 @@
         "width": "4"
       },
       "type": "border"
+    },
+    "default": {
+      "value": {
+        "color": "{neutral.medium}",
+        "width": "1"
+      },
+      "type": "border"
     }
   },
   "mapped/dark": {
@@ -1704,7 +1715,7 @@
         "type": "color"
       },
       "secondary": {
-        "value": "{neutral.light}",
+        "value": "{neutral.dark}",
         "type": "color"
       },
       "inverted": {
@@ -1718,11 +1729,11 @@
     },
     "boarder": {
       "default": {
-        "value": "{neutral.dark}",
+        "value": "{neutral.darker}",
         "type": "color"
       },
       "input-filled": {
-        "value": "{neutral.darker}",
+        "value": "{neutral.dark}",
         "type": "color"
       },
       "error": {
@@ -1742,7 +1753,7 @@
         "type": "color"
       },
       "divider": {
-        "value": "{neutral.medium-dark}",
+        "value": "{neutral.dark}",
         "type": "color"
       },
       "focus": {
@@ -1762,18 +1773,27 @@
         "description": "Grey-15. input fields, dark table row"
       },
       "tertiary": {
-        "value": "{neutral.dark}",
+        "value": "{neutral.medium-dark}",
         "type": "color",
         "description": "Grey-25. messaging, accordion, table header portal"
       },
       "hover": {
-        "value": "{neutral.medium}",
+        "value": "{neutral.medium-dark}",
         "type": "color",
         "description": "Grey-35"
       },
       "disabled": {
-        "value": "{neutral.medium-dark}",
+        "value": "{neutral.darker}",
         "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "0.2",
+              "space": "lch"
+            }
+          }
+        },
         "description": "Grey-40"
       },
       "canvas": {
@@ -1911,6 +1931,10 @@
         "value": "{neutral.darker}",
         "type": "color"
       },
+      "inverted": {
+        "value": "{neutral.lightest}",
+        "type": "color"
+      },
       "error": {
         "value": "{error.primary}",
         "type": "color"
@@ -1938,6 +1962,20 @@
       "value": {
         "color": "{boarder.success}",
         "width": "4"
+      },
+      "type": "border"
+    },
+    "default": {
+      "value": {
+        "color": "{neutral.darker}",
+        "width": "1"
+      },
+      "type": "border"
+    },
+    "default-copy": {
+      "value": {
+        "color": "{neutral.darker}",
+        "width": "1"
       },
       "type": "border"
     }
