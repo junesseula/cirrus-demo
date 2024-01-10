@@ -1479,6 +1479,10 @@
       "divider": {
         "value": "{neutral.medium-dark}",
         "type": "color"
+      },
+      "focus": {
+        "value": "{brand.agnostic.blue-default}",
+        "type": "color"
       }
     },
     "surface": {
@@ -1538,10 +1542,6 @@
       },
       "error": {
         "value": "{error.lightest}",
-        "type": "color"
-      },
-      "focus": {
-        "value": "{brand.primary.lightest}",
         "type": "color"
       },
       "success": {
