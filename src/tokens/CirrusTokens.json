@@ -1220,8 +1220,8 @@
     },
     "typography": {
       "ui": {
-        "primary": {
-          "s": {
+        "s": {
+          "primary": {
             "value": {
               "fontFamily": "{Inter}"
             },
