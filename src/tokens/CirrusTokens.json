@@ -1167,6 +1167,18 @@
           }
         }
       }
+    },
+    "typography": {
+      "ui": {
+        "primary": {
+          "s": {
+            "value": {
+              "fontFamily": "{Inter}"
+            },
+            "type": "typography"
+          }
+        }
+      }
     }
   },
   "mapped/light(component)": {
