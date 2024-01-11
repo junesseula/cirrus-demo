@@ -1039,6 +1039,10 @@
         "type": "color",
         "description": "grey 85"
       },
+      "darkII": {
+        "value": "{color.grey.75}",
+        "type": "color"
+      },
       "dark": {
         "value": "{color.grey.70}",
         "type": "color"
@@ -1295,6 +1299,10 @@
         "value": "{color.grey.85}",
         "type": "color",
         "description": "grey 85"
+      },
+      "darkII": {
+        "value": "{color.grey.75}",
+        "type": "color"
       },
       "dark": {
         "value": "{color.grey.70}",
@@ -1730,8 +1738,17 @@
         "type": "color"
       },
       "secondary": {
-        "value": "{neutral.dark}",
-        "type": "color"
+        "value": "{neutral.medium-dark}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "0.1",
+              "space": "lch"
+            }
+          }
+        }
       },
       "inverted": {
         "value": "{neutral.darkest}",
@@ -1788,7 +1805,7 @@
         "description": "Grey-15. input fields, dark table row"
       },
       "tertiary": {
-        "value": "{neutral.medium-dark}",
+        "value": "{neutral.darkII}",
         "type": "color",
         "description": "Grey-25. messaging, accordion, table header portal"
       },
@@ -1952,11 +1969,11 @@
     },
     "icon": {
       "default": {
-        "value": "{neutral.darker}",
+        "value": "{neutral.lightest}",
         "type": "color"
       },
       "inverted": {
-        "value": "{neutral.lightest}",
+        "value": "{neutral.darker}",
         "type": "color"
       },
       "error": {
