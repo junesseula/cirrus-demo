@@ -964,9 +964,19 @@
       }
     },
     "line-height": {
-      "100%": {
-        "value": "100%",
-        "type": "lineHeights"
+      "small-type": {
+        "default": {
+          "value": "{line-height.125}",
+          "type": "lineHeights"
+        },
+        "compact": {
+          "value": "{line-height.100}",
+          "type": "lineHeights"
+        },
+        "comfortable": {
+          "value": "{line-height.150}",
+          "type": "lineHeights"
+        }
       }
     }
   },
@@ -1165,6 +1175,19 @@
             "value": "{brand.neutral.dark}",
             "type": "color"
           }
+        }
+      }
+    },
+    "typography": {
+      "body": {
+        "m": {
+          "value": {
+            "fontFamily": "{Inter}",
+            "fontWeight": "{font-weight.400}",
+            "fontSize": "{font-size.body.m}",
+            "lineHeight": "{line-height.100}"
+          },
+          "type": "typography"
         }
       }
     }
