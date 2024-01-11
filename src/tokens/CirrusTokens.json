@@ -1012,6 +1012,12 @@
           "type": "lineHeights"
         }
       }
+    },
+    "font-family": {
+      "product": {
+        "value": "{Inter}",
+        "type": "fontFamilies"
+      }
     }
   },
   "mapped/ light (UI)": {
