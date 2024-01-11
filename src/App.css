@@ -38,3 +38,23 @@
     transform: rotate(360deg);
   }
 }
+
+/* Cirrus Styles */
+body {
+  font-weight: regular;
+  font-size: 16px;
+}
+
+.sectionTitle:after {
+  content: '';
+  display: block;
+  width: 40px;
+  border-bottom: 2px solid #000000;
+  margin: 8px 0 16px;
+}
+
+.chakra-stack.css-9lcvjf {
+  background-color: #ECECEC;
+  padding: 16px;
+  border-radius: 4px;
+}

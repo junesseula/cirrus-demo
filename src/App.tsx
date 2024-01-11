@@ -7,16 +7,33 @@ import {
   AvatarBadge,
   Text,
   Button,
-  Icon,
   Input,
+  FormControl,
+  FormHelperText,
+  FormLabel,
+  chakra,
+  Flex,
+  HStack,
+  flexbox,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  Menu,
+  Checkbox,
+  RadioGroup,
+  Radio,
+  InputRightElement,
+  InputGroup,
 } from '@chakra-ui/react'
 // import { FiMail } from 'react-icons/fi'
 // import { BsGlobe } from 'react-icons/bs'
-import logo from './logo.svg';
 import './App.css';
+import { myTheme } from './theme';
 
 // 1. import `ChakraProvider` component
 import { ChakraProvider } from '@chakra-ui/react'
+import * as icons from '@carbon/icons-react';
+import { ChevronDownIcon } from '@chakra-ui/icons';
 
 // function App() {
 //   // 2. Wrap ChakraProvider at the root of your app
@@ -59,9 +76,34 @@ import { ChakraProvider } from '@chakra-ui/react'
 //   )
 // }
 
+// 2. Call `extendTheme` and pass your custom values
+// const myTheme = extendTheme({
+//   colors: {
+//     brand: {
+//       100: "#f7fafc",
+//       // ...
+//       900: "#1a202c",
+//     },
+//   },
+// })
+
+function SearchTypeRadio() {
+  const [value, setValue] = React.useState("1")
+  return (
+    <RadioGroup onChange={setValue} value={value}>
+      <Stack direction="row">
+        <Radio value="1">Search Individual</Radio>
+        <Radio value="2">Search Business</Radio>
+        <Radio value="3">Search Facility</Radio>
+      </Stack>
+    </RadioGroup>
+  )
+}
+
 function App() {
+  console.log({myTheme});
   return(
-    <ChakraProvider>
+    <ChakraProvider theme={myTheme}>
       <Stack width="1728px" height="1442px" maxWidth="100%" background="#FCFAFA">
         <Stack
           justify="flex-start"
@@ -123,18 +165,16 @@ function App() {
                 </Stack>
                 <Stack direction="row" justify="flex-start" align="flex-start">
                   <Button
-                    // leftIcon={<Icon as={FiMail} />}
+                    leftIcon={<icons.Email />}
                     size="sm"
-                    variant="outline"
-                    colorScheme="blue"
+                    variant="ghost"
                   >
                     Inbox
                   </Button>
                   <Button
-                    // leftIcon={<Icon as={BsGlobe} />}
+                    leftIcon={<icons.Earth />}
                     size="sm"
-                    variant="outline"
-                    colorScheme="blue"
+                    variant="ghost"
                   >
                     EN
                   </Button>
@@ -219,31 +259,98 @@ function App() {
                 background="white"
                 boxShadow="xl"
               >
-                <Text
-                  fontFamily="Inter"
-                  lineHeight="1.33"
-                  fontWeight="bold"
-                  fontSize="24px"
-                  color="#000000"
-                >
-                  Application Detail
-                </Text>
-                <Stack justify="flex-start" align="flex-start" alignSelf="stretch">
-                  <Text
-                    fontFamily="Inter"
-                    lineHeight="1.2"
-                    fontWeight="bold"
-                    fontSize="20px"
-                    color="#000000"
-                  >
-                    Personal Information
-                  </Text>
+                <Stack maxWidth="848px" justify="flex-start" align="flex-start" alignSelf="stretch">
+                  <chakra.h1 className="sectionTitle" textStyle="h2">
+                    Licensee Search
+                  </chakra.h1>
+                  <p>The Thentia Cloud maintains an online Public Registry of Professional Counselors in the state of Thentia. This public registry allows you to search and verify the registration by first name, last name, city, state, zip code, and license type.</p>
+                  <HStack>
+                    <Menu>
+                      <MenuButton as={Button} variant="ghost" rightIcon={<icons.ChevronDown />}>
+                        License Type
+                      </MenuButton>
+                      <MenuList>
+                        <MenuItem>Registered Nurse (RN)</MenuItem>
+                        <MenuItem>Licensed Practitioner Nurse (LPN)</MenuItem>
+                        <MenuItem>Regestered Psychiatric Nurse (RPN)</MenuItem>
+                        <MenuItem>Doctor of Medicine (MD)</MenuItem>
+                        <MenuItem>Master of Surgery (CM)</MenuItem>
+                      </MenuList>
+                    </Menu>
+                    <Menu>
+                      <MenuButton as={Button} variant="ghost" rightIcon={<icons.ChevronDown />}>
+                        License Status
+                      </MenuButton>
+                      <MenuList>
+                        <MenuItem>Active</MenuItem>
+                        <MenuItem>Expired</MenuItem>
+                        <MenuItem>Suspended</MenuItem>
+                      </MenuList>
+                    </Menu>
+                  </HStack>
+                  <HStack alignSelf="stretch">
+                    <InputGroup>
+                      <Input
+                        placeholder="Search by first name, last Name, city, state, zip Code and / or license type"
+                        bg="cirrusTokens.color.grey[0].value"
+                        size="md"
+                        type="search"
+                        border="0"
+                        borderRadius="0"
+                        variant="outline"
+                      />
+                      <InputRightElement margin="4px" children={<icons.Search />} />
+                    </InputGroup>
+                    <Button>Search</Button>
+                  </HStack>
+                  <Stack></Stack><Checkbox>Only show licensees with discipline notices.</Checkbox>
+                  {SearchTypeRadio()}
                   <Stack
                     justify="flex-start"
                     align="flex-start"
                     spacing="24px"
                     alignSelf="stretch"
                   >
+                    <HStack
+                      alignSelf="stretch"
+                      spacing="24px"
+                      flexWrap="wrap"
+                    >
+                      <FormControl flex="1" isRequired>
+                        <FormLabel>First Name</FormLabel>
+                        <Input />
+                      </FormControl>
+                      <FormControl flex="1" isRequired>
+                        <FormLabel>Last Name</FormLabel>
+                        <Input />
+                      </FormControl>
+                      <FormControl flex="1">
+                        <FormLabel>Middle Name</FormLabel>
+                        <Input />
+                      </FormControl>
+                    </HStack>
+                    <Stack
+                      direction="row"
+                      justify="flex-start"
+                      align="flex-start"
+                      spacing="16px"
+                      alignSelf="stretch"
+                    >
+                      <FormControl flex="1" isRequired>
+                        <FormLabel>Birth Date</FormLabel>
+                        <Input
+                          placeholder="MM/DD/YYYY"
+                          flex="1"
+                          type="date"
+                        />
+                      </FormControl>
+                      <FormControl flex="1" isRequired>
+                        <FormLabel>Social Security Number</FormLabel>
+                        <Input
+                          flex="1"
+                        />
+                      </FormControl>
+                    </Stack>
                     <Stack
                       direction="row"
                       justify="flex-start"
@@ -252,15 +359,12 @@ function App() {
                       alignSelf="stretch"
                     >
                       <Input
-                        placeholder="First Name"
-                        size="xs"
-                        height="24px"
+                        placeholder="Placeholder"
+                        
                         flex="1"
                       />
                       <Input
-                        placeholder="Last Name"
-                        size="xs"
-                        height="24px"
+                        placeholder="Placeholder"
                         flex="1"
                       />
                     </Stack>
@@ -273,66 +377,18 @@ function App() {
                     >
                       <Input
                         placeholder="Placeholder"
-                        size="xs"
-                        height="24px"
                         flex="1"
                       />
                       <Input
                         placeholder="Placeholder"
-                        size="xs"
-                        height="24px"
-                        flex="1"
-                      />
-                    </Stack>
-                    <Stack
-                      direction="row"
-                      justify="flex-start"
-                      align="flex-start"
-                      spacing="16px"
-                      alignSelf="stretch"
-                    >
-                      <Input
-                        placeholder="Placeholder"
-                        size="xs"
-                        height="24px"
                         flex="1"
                       />
                       <Input
                         placeholder="Placeholder"
-                        size="xs"
-                        height="24px"
-                        flex="1"
-                      />
-                    </Stack>
-                    <Stack
-                      direction="row"
-                      justify="flex-start"
-                      align="flex-start"
-                      spacing="16px"
-                      alignSelf="stretch"
-                    >
-                      <Input
-                        placeholder="Placeholder"
-                        size="xs"
-                        height="24px"
                         flex="1"
                       />
                       <Input
                         placeholder="Placeholder"
-                        size="xs"
-                        height="24px"
-                        flex="1"
-                      />
-                      <Input
-                        placeholder="Placeholder"
-                        size="xs"
-                        height="24px"
-                        flex="1"
-                      />
-                      <Input
-                        placeholder="Placeholder"
-                        size="xs"
-                        height="24px"
                         flex="1"
                       />
                     </Stack>
@@ -344,15 +400,9 @@ function App() {
                   spacing="16px"
                   alignSelf="stretch"
                 >
-                  <Text
-                    fontFamily="Inter"
-                    lineHeight="1.2"
-                    fontWeight="bold"
-                    fontSize="20px"
-                    color="#000000"
-                  >
+                  <chakra.h2 textStyle="h2">
                     Mailing Address
-                  </Text>
+                  </chakra.h2>
                   <Stack
                     justify="flex-start"
                     align="flex-start"
@@ -368,8 +418,6 @@ function App() {
                     >
                       <Input
                         placeholder="Address Line 1"
-                        size="xs"
-                        height="24px"
                         flex="1"
                       />
                     </Stack>
@@ -382,8 +430,6 @@ function App() {
                     >
                       <Input
                         placeholder="Address Line 2"
-                        size="xs"
-                        height="24px"
                         flex="1"
                       />
                     </Stack>
@@ -396,14 +442,10 @@ function App() {
                     >
                       <Input
                         placeholder="Placeholder"
-                        size="xs"
-                        height="24px"
                         flex="1"
                       />
                       <Input
                         placeholder="Placeholder"
-                        size="xs"
-                        height="24px"
                         flex="1"
                       />
                     </Stack>
@@ -416,28 +458,18 @@ function App() {
                     >
                       <Input
                         placeholder="Placeholder"
-                        size="xs"
-                        height="24px"
                         flex="1"
                       />
                       <Input
                         placeholder="Placeholder"
-                        size="xs"
-                        height="24px"
                         flex="1"
                       />
                     </Stack>
                   </Stack>
                 </Stack>
-                <Text
-                  fontFamily="Inter"
-                  lineHeight="1.2"
-                  fontWeight="bold"
-                  fontSize="20px"
-                  color="#000000"
-                >
-                  Previous Licenses
-                </Text>
+                <chakra.h2 textStyle="h2">
+                    Previous Licenses
+                </chakra.h2>
                 <Stack
                   padding="12px"
                   // variant="Unstyled"
@@ -663,15 +695,9 @@ function App() {
                   spacing="16px"
                   alignSelf="stretch"
                 >
-                  <Text
-                    fontFamily="Inter"
-                    lineHeight="1.2"
-                    fontWeight="bold"
-                    fontSize="20px"
-                    color="#000000"
-                  >
+                  <chakra.h2 textStyle="h2">
                     Billing Address
-                  </Text>
+                  </chakra.h2>
                   <Stack
                     justify="flex-start"
                     align="flex-start"
@@ -687,8 +713,6 @@ function App() {
                     >
                       <Input
                         placeholder="Address Line 1"
-                        size="xs"
-                        height="24px"
                         flex="1"
                       />
                     </Stack>
@@ -701,8 +725,6 @@ function App() {
                     >
                       <Input
                         placeholder="Address Line 2"
-                        size="xs"
-                        height="24px"
                         flex="1"
                       />
                     </Stack>
@@ -715,14 +737,10 @@ function App() {
                     >
                       <Input
                         placeholder="Placeholder"
-                        size="xs"
-                        height="24px"
                         flex="1"
                       />
                       <Input
                         placeholder="Placeholder"
-                        size="xs"
-                        height="24px"
                         flex="1"
                       />
                     </Stack>
@@ -735,18 +753,13 @@ function App() {
                     >
                       <Input
                         placeholder="Placeholder"
-                        size="xs"
-                        height="24px"
                         flex="1"
                       />
                       <Input
                         placeholder="Placeholder"
-                        size="xs"
-                        height="24px"
                         flex="1"
                       />
                     </Stack>
-                    <Box height="431px" alignSelf="stretch" />
                   </Stack>
                 </Stack>
                 <Stack
@@ -755,15 +768,9 @@ function App() {
                   spacing="16px"
                   alignSelf="stretch"
                 >
-                  <Text
-                    fontFamily="Inter"
-                    lineHeight="1.2"
-                    fontWeight="bold"
-                    fontSize="20px"
-                    color="#000000"
-                  >
+                  <chakra.h2 textStyle="h2">
                     Summer House Address
-                  </Text>
+                  </chakra.h2>
                   <Stack
                     justify="flex-start"
                     align="flex-start"
@@ -779,8 +786,6 @@ function App() {
                     >
                       <Input
                         placeholder="Address Line 1"
-                        size="xs"
-                        height="24px"
                         flex="1"
                       />
                     </Stack>
@@ -793,8 +798,6 @@ function App() {
                     >
                       <Input
                         placeholder="Address Line 2"
-                        size="xs"
-                        height="24px"
                         flex="1"
                       />
                     </Stack>
@@ -807,14 +810,10 @@ function App() {
                     >
                       <Input
                         placeholder="Placeholder"
-                        size="xs"
-                        height="24px"
                         flex="1"
                       />
                       <Input
                         placeholder="Placeholder"
-                        size="xs"
-                        height="24px"
                         flex="1"
                       />
                     </Stack>
@@ -827,14 +826,10 @@ function App() {
                     >
                       <Input
                         placeholder="Placeholder"
-                        size="xs"
-                        height="24px"
                         flex="1"
                       />
                       <Input
                         placeholder="Placeholder"
-                        size="xs"
-                        height="24px"
                         flex="1"
                       />
                     </Stack>
