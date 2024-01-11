@@ -610,6 +610,10 @@
           "value": "{font-size.scaled.BASE} * 50",
           "type": "fontSizes"
         },
+        "63": {
+          "value": "{font-size.scaled.BASE} * 62.5",
+          "type": "fontSizes"
+        },
         "75": {
           "value": "{font-size.scaled.BASE} * 75",
           "type": "fontSizes"
@@ -686,6 +690,10 @@
           "value": "{font-size.REM} * 1/100",
           "type": "paragraphSpacing"
         }
+      },
+      "default": {
+        "value": "0",
+        "type": "paragraphSpacing"
       }
     },
     "line-height": {
@@ -915,12 +923,20 @@
         }
       },
       "ui": {
+        "xs": {
+          "value": "{font-size.scaled.63}",
+          "type": "fontSizes"
+        },
         "s": {
           "value": "{font-size.scaled.75}",
           "type": "fontSizes"
         },
         "m": {
           "value": "{font-size.scaled.87}",
+          "type": "fontSizes"
+        },
+        "l": {
+          "value": "{font-size.scaled.100}",
           "type": "fontSizes"
         }
       },
@@ -938,9 +954,17 @@
           "type": "fontSizes"
         }
       },
-      "wildcard": {
+      "display": {
         "s": {
-          "value": "{font-size.scaled.500}",
+          "value": "{font-size.scaled.200}",
+          "type": "fontSizes"
+        },
+        "m": {
+          "value": "{font-size.scaled.300}",
+          "type": "fontSizes"
+        },
+        "l": {
+          "value": "{font-size.scaled.400}",
           "type": "fontSizes"
         }
       }
@@ -964,9 +988,29 @@
       }
     },
     "line-height": {
-      "100%": {
-        "value": "100%",
-        "type": "lineHeights"
+      "small-type": {
+        "s": {
+          "value": "{line-height.100}",
+          "type": "lineHeights"
+        },
+        "m": {
+          "value": "{line-height.150}",
+          "type": "lineHeights"
+        },
+        "l": {
+          "value": "{line-height.200}",
+          "type": "lineHeights"
+        }
+      },
+      "big-type": {
+        "s": {
+          "value": "{line-height.100}",
+          "type": "lineHeights"
+        },
+        "m": {
+          "value": "{line-height.125}",
+          "type": "lineHeights"
+        }
       }
     }
   },
