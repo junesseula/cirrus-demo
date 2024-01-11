@@ -2047,7 +2047,62 @@
     }
   },
   "mapped/mobile": {},
-  "$themes": [],
+  "$themes": [
+    {
+      "id": "14d5727b8649aa0b86d5a15d4ddb410bbb7dd350",
+      "name": "global",
+      "$figmaStyleReferences": {},
+      "selectedTokenSets": {
+        "global": "enabled"
+      }
+    },
+    {
+      "id": "fa68f6efaa9f06c726f341ac717aaf1fb6dcfe3e",
+      "name": "platform",
+      "$figmaStyleReferences": {},
+      "selectedTokenSets": {
+        "alias/platform": "enabled",
+        "global": "source"
+      },
+      "group": "alias"
+    },
+    {
+      "id": "547ba6c65449e946bd782608cb87f152f62708d4",
+      "name": "portal",
+      "$figmaStyleReferences": {},
+      "selectedTokenSets": {
+        "alias/portal": "enabled",
+        "global": "source"
+      },
+      "group": "alias"
+    },
+    {
+      "id": "a6177a092477c66f8cb5474224a72527ed2ebb0e",
+      "name": "light",
+      "$figmaStyleReferences": {},
+      "selectedTokenSets": {
+        "mapped/ light": "enabled",
+        "alias/portal": "source",
+        "alias/platform": "source",
+        "alias": "source",
+        "global": "source"
+      },
+      "group": "mapped"
+    },
+    {
+      "id": "6643565fb21821bac3866b1f3ba55a7378ba4f02",
+      "name": "dark",
+      "$figmaStyleReferences": {},
+      "selectedTokenSets": {
+        "mapped/dark": "enabled",
+        "alias/portal": "source",
+        "alias/platform": "source",
+        "alias": "source",
+        "global": "source"
+      },
+      "group": "mapped"
+    }
+  ],
   "$metadata": {
     "tokenSetOrder": [
       "global",
