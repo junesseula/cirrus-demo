@@ -1188,6 +1188,15 @@
             "lineHeight": "{line-height.100}"
           },
           "type": "typography"
+        },
+        "m-copy": {
+          "value": {
+            "fontFamily": "{Inter}",
+            "fontWeight": "{font-weight.400}",
+            "fontSize": "{font-size.body.m}",
+            "lineHeight": "{line-height.100}"
+          },
+          "type": "typography"
         }
       }
     }
