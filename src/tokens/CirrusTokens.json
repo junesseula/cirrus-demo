@@ -602,7 +602,7 @@
     },
     "font-size": {
       "REM": {
-        "value": "16",
+        "value": "{size.scale}",
         "type": "fontSizes"
       },
       "scaled": {
@@ -683,7 +683,7 @@
           "type": "paragraphSpacing"
         },
         "base": {
-          "value": "{size.scale} * 1/100",
+          "value": "{font-size.REM} * 1/100",
           "type": "paragraphSpacing"
         }
       }
@@ -937,31 +937,28 @@
         "type": "fontSizes"
       }
     },
-    "h1": {
-      "value": {
-        "fontFamily": "{Inter}",
-        "fontWeight": "{regular.Bold}",
-        "fontSize": "{heading.l}"
-      },
-      "type": "typography"
-    },
     "font-weight": {
-      "ui": {
-        "primary": {
-          "value": "{regular.Bold}",
-          "type": "fontWeights"
-        },
-        "secondary": {
-          "value": "{regular.Medium}",
-          "type": "fontWeights"
-        }
+      "400": {
+        "value": "{regular.Regular}",
+        "type": "fontWeights"
+      },
+      "500": {
+        "value": "{regular.Medium}",
+        "type": "fontWeights"
+      },
+      "600": {
+        "value": "{regular.Semi Bold}",
+        "type": "fontWeights"
+      },
+      "700": {
+        "value": "{regular.Bold}",
+        "type": "fontWeights"
       }
     },
     "line-height": {
-      "testing": {
-        "value": "1600%",
-        "type": "lineHeights",
-        "description": "testing commit branch"
+      "100%": {
+        "value": "100%",
+        "type": "lineHeights"
       }
     }
   },
