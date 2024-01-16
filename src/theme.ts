@@ -33,10 +33,10 @@ export const myTheme = extendTheme({
     },
   },
   layerStyles: {
-    required: {
-      color: "red.500",
-      fontWeight:"medium",
-      paddingLeft: "4px",
+    greyContainer: {
+      bg: "#ECECEC",
+      padding: "16px",
+      borderRadius: "4px",
     }
   },
   colors: {
@@ -77,10 +77,9 @@ export const myTheme = extendTheme({
       },
       // 3. We can add a new visual variant
       variants: {
-        // 'with-shadow': {
-        //   bg: 'green.400',
-        //   boxShadow: '0 0 2px 2px #efdfde',
-        // },
+        'ghost-unstyled': {
+          color: cirrusTokens.color.grey[85].value,
+        },
         // 4. We can override existing variants
         solid: {
           bg: cirrusTokens.color.blue[60].value,
@@ -89,7 +88,7 @@ export const myTheme = extendTheme({
           color: cirrusTokens.color.blue[60].value,
         },
         ghost: {
-          color: cirrusTokens.color.grey[85].value,
+          color: cirrusTokens.color.blue[60].value,
         },
         link: {
           color: cirrusTokens.color.blue[60].value,

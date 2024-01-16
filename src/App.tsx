@@ -24,7 +24,9 @@ import {
   Radio,
   InputRightElement,
   InputGroup,
+  Spacer,
 } from '@chakra-ui/react'
+import { CiSearchBar } from './stories/Searchbar';
 // import { FiMail } from 'react-icons/fi'
 // import { BsGlobe } from 'react-icons/bs'
 import './App.css';
@@ -104,14 +106,12 @@ function App() {
   console.log({myTheme});
   return(
     <ChakraProvider theme={myTheme}>
-      <Stack width="1728px" height="1442px" maxWidth="100%" background="#FCFAFA">
+      <Stack background="#FCFAFA">
         <Stack
           justify="flex-start"
           align="flex-start"
           spacing="0px"
-          width="1728px"
-          height="1442px"
-          maxWidth="100%"
+          minHeight="100vh"
         >
           <Stack
             justify="flex-start"
@@ -167,14 +167,14 @@ function App() {
                   <Button
                     leftIcon={<icons.Email />}
                     size="sm"
-                    variant="ghost"
+                    variant="ghost-unstyled"
                   >
                     Inbox
                   </Button>
                   <Button
                     leftIcon={<icons.Earth />}
                     size="sm"
-                    variant="ghost"
+                    variant="ghost-unstyled"
                   >
                     EN
                   </Button>
@@ -190,7 +190,7 @@ function App() {
             flex="1"
             alignSelf="stretch"
           >
-            <Stack
+            {/* <Stack
               direction="row"
               justify="flex-start"
               align="flex-start"
@@ -239,14 +239,13 @@ function App() {
                 </Text>
                 <Box width="158px" height="16px" background="gray.100" />
               </Stack>
-            </Stack>
+            </Stack> */}
             <Stack
               padding="24px"
               direction="row"
-              justify="flex-start"
-              align="flex-start"
+              justify="center"
+              align="center"
               flex="1"
-              alignSelf="stretch"
             >
               <Stack
                 padding="32px"
@@ -255,7 +254,6 @@ function App() {
                 align="flex-start"
                 spacing="24px"
                 overflow="hidden"
-                flex="1"
                 background="white"
                 boxShadow="xl"
               >
@@ -288,23 +286,13 @@ function App() {
                       </MenuList>
                     </Menu>
                   </HStack>
-                  <HStack alignSelf="stretch">
-                    <InputGroup>
-                      <Input
-                        placeholder="Search by first name, last Name, city, state, zip Code and / or license type"
-                        bg="cirrusTokens.color.grey[0].value"
-                        size="md"
-                        type="search"
-                        border="0"
-                        borderRadius="0"
-                        variant="outline"
-                      />
-                      <InputRightElement margin="4px" children={<icons.Search />} />
-                    </InputGroup>
-                    <Button>Search</Button>
-                  </HStack>
+                  <CiSearchBar bg="grey" />
                   <Stack></Stack><Checkbox>Only show licensees with discipline notices.</Checkbox>
                   {SearchTypeRadio()}
+                  <Spacer marginBottom="32px"/>
+                  <chakra.h2 className="sectionTitle" textStyle="h2">
+                    Register your profile
+                  </chakra.h2>
                   <Stack
                     justify="flex-start"
                     align="flex-start"
@@ -358,15 +346,20 @@ function App() {
                       spacing="16px"
                       alignSelf="stretch"
                     >
-                      <Input
-                        placeholder="Placeholder"
-                        
-                        flex="1"
-                      />
-                      <Input
-                        placeholder="Placeholder"
-                        flex="1"
-                      />
+                      <FormControl flex="1" isRequired>
+                        <FormLabel>Primary Email Address</FormLabel>
+                        <Input
+                          flex="1"
+                          type="email"
+                        />
+                      </FormControl>
+                      <FormControl flex="1">
+                        <FormLabel>Secondary Email Address</FormLabel>
+                        <Input
+                          flex="1"
+                          type="email"
+                        />
+                      </FormControl>
                     </Stack>
                     <Stack
                       direction="row"
@@ -375,465 +368,25 @@ function App() {
                       spacing="16px"
                       alignSelf="stretch"
                     >
-                      <Input
-                        placeholder="Placeholder"
-                        flex="1"
-                      />
-                      <Input
-                        placeholder="Placeholder"
-                        flex="1"
-                      />
-                      <Input
-                        placeholder="Placeholder"
-                        flex="1"
-                      />
-                      <Input
-                        placeholder="Placeholder"
-                        flex="1"
-                      />
+                      <FormControl flex="1" isRequired>
+                        <FormLabel>Primary Phone Number</FormLabel>
+                        <Input
+                          flex="1"
+                          type="phone"
+                        />
+                      </FormControl>
+                      <FormControl flex="1">
+                        <FormLabel>Secondary Phone Number</FormLabel>
+                        <Input
+                          flex="1"
+                          type="phone"
+                        />
+                      </FormControl>
                     </Stack>
                   </Stack>
-                </Stack>
-                <Stack
-                  justify="flex-start"
-                  align="flex-start"
-                  spacing="16px"
-                  alignSelf="stretch"
-                >
-                  <chakra.h2 textStyle="h2">
-                    Mailing Address
-                  </chakra.h2>
-                  <Stack
-                    justify="flex-start"
-                    align="flex-start"
-                    spacing="24px"
-                    alignSelf="stretch"
-                  >
-                    <Stack
-                      direction="row"
-                      justify="flex-start"
-                      align="flex-start"
-                      spacing="16px"
-                      alignSelf="stretch"
-                    >
-                      <Input
-                        placeholder="Address Line 1"
-                        flex="1"
-                      />
-                    </Stack>
-                    <Stack
-                      direction="row"
-                      justify="flex-start"
-                      align="flex-start"
-                      spacing="16px"
-                      alignSelf="stretch"
-                    >
-                      <Input
-                        placeholder="Address Line 2"
-                        flex="1"
-                      />
-                    </Stack>
-                    <Stack
-                      direction="row"
-                      justify="flex-start"
-                      align="flex-start"
-                      spacing="16px"
-                      alignSelf="stretch"
-                    >
-                      <Input
-                        placeholder="Placeholder"
-                        flex="1"
-                      />
-                      <Input
-                        placeholder="Placeholder"
-                        flex="1"
-                      />
-                    </Stack>
-                    <Stack
-                      direction="row"
-                      justify="flex-start"
-                      align="flex-start"
-                      spacing="16px"
-                      alignSelf="stretch"
-                    >
-                      <Input
-                        placeholder="Placeholder"
-                        flex="1"
-                      />
-                      <Input
-                        placeholder="Placeholder"
-                        flex="1"
-                      />
-                    </Stack>
-                  </Stack>
-                </Stack>
-                <chakra.h2 textStyle="h2">
-                    Previous Licenses
-                </chakra.h2>
-                <Stack
-                  padding="12px"
-                  // variant="Unstyled"
-                  alignSelf="stretch"
-                  direction="row"
-                  justify="flex-start"
-                  align="flex-start"
-                  spacing="0px"
-                  borderColor="gray.200"
-                  borderStartWidth="1px"
-                  borderEndWidth="1px"
-                  borderTopWidth="1px"
-                  borderBottomWidth="1px"
-                >
-                  <Stack
-                    justify="flex-start"
-                    align="flex-start"
-                    spacing="0px"
-                    flex="1"
-                  >
-                    <Stack height="40px" alignSelf="stretch" background="white">
-                      <Text
-                        fontFamily="Inter"
-                        lineHeight="1.33"
-                        fontWeight="bold"
-                        fontSize="12px"
-                        letterSpacing="0.05em"
-                        color="gray.700"
-                        width="200px"
-                      >
-                        NAME
-                      </Text>
-                    </Stack>
-                    <Stack height="52px" alignSelf="stretch" background="white">
-                      <Text
-                        fontFamily="Inter"
-                        lineHeight="1.43"
-                        fontWeight="medium"
-                        fontSize="14px"
-                        color="gray.700"
-                        width="200px"
-                      >
-                        Segun Adebayo
-                      </Text>
-                    </Stack>
-                    <Stack height="52px" alignSelf="stretch" background="white">
-                      <Text
-                        fontFamily="Inter"
-                        lineHeight="1.43"
-                        fontWeight="medium"
-                        fontSize="14px"
-                        color="gray.700"
-                        width="200px"
-                      >
-                        Mark Chandler
-                      </Text>
-                    </Stack>
-                    <Stack height="52px" alignSelf="stretch" background="white">
-                      <Text
-                        fontFamily="Inter"
-                        lineHeight="1.43"
-                        fontWeight="medium"
-                        fontSize="14px"
-                        color="gray.700"
-                        width="200px"
-                      >
-                        Lazar Nikolov
-                      </Text>
-                    </Stack>
-                    <Stack height="52px" alignSelf="stretch" background="white">
-                      <Text
-                        fontFamily="Inter"
-                        lineHeight="1.43"
-                        fontWeight="medium"
-                        fontSize="14px"
-                        color="gray.700"
-                        width="200px"
-                      >
-                        Javier Alaves
-                      </Text>
-                    </Stack>
-                  </Stack>
-                  <Stack
-                    justify="flex-start"
-                    align="flex-start"
-                    spacing="0px"
-                    flex="1"
-                  >
-                    <Stack height="40px" alignSelf="stretch" background="white">
-                      <Text
-                        fontFamily="Inter"
-                        lineHeight="1.33"
-                        fontWeight="bold"
-                        fontSize="12px"
-                        letterSpacing="0.05em"
-                        color="gray.700"
-                        width="200px"
-                      >
-                        TITLE
-                      </Text>
-                    </Stack>
-                    <Stack height="52px" alignSelf="stretch" background="white">
-                      <Text
-                        fontFamily="Inter"
-                        lineHeight="1.43"
-                        fontWeight="regular"
-                        fontSize="14px"
-                        color="gray.700"
-                        width="200px"
-                      >
-                        Founder of Chakra UI
-                      </Text>
-                    </Stack>
-                    <Stack height="52px" alignSelf="stretch" background="white">
-                      <Text
-                        fontFamily="Inter"
-                        lineHeight="1.43"
-                        fontWeight="regular"
-                        fontSize="14px"
-                        color="gray.700"
-                        width="200px"
-                      >
-                        Developer
-                      </Text>
-                    </Stack>
-                    <Stack height="52px" alignSelf="stretch" background="white">
-                      <Text
-                        fontFamily="Inter"
-                        lineHeight="1.43"
-                        fontWeight="regular"
-                        fontSize="14px"
-                        color="gray.700"
-                        width="200px"
-                      >
-                        DevRel
-                      </Text>
-                    </Stack>
-                    <Stack height="52px" alignSelf="stretch" background="white">
-                      <Text
-                        fontFamily="Inter"
-                        lineHeight="1.43"
-                        fontWeight="regular"
-                        fontSize="14px"
-                        color="gray.700"
-                        width="200px"
-                      >
-                        Designer
-                      </Text>
-                    </Stack>
-                  </Stack>
-                  <Stack
-                    justify="flex-start"
-                    align="flex-start"
-                    spacing="0px"
-                    flex="1"
-                  >
-                    <Stack height="40px" alignSelf="stretch" background="white">
-                      <Text
-                        fontFamily="Inter"
-                        lineHeight="1.33"
-                        fontWeight="bold"
-                        fontSize="12px"
-                        letterSpacing="0.05em"
-                        color="gray.700"
-                        width="200px"
-                      >
-                        EMAIL
-                      </Text>
-                    </Stack>
-                    <Stack height="52px" alignSelf="stretch" background="white">
-                      <Text
-                        fontFamily="Inter"
-                        lineHeight="1.43"
-                        fontWeight="regular"
-                        fontSize="14px"
-                        color="gray.700"
-                        width="200px"
-                      >
-                        sage@chakra-ui.com
-                      </Text>
-                    </Stack>
-                    <Stack height="52px" alignSelf="stretch" background="white">
-                      <Text
-                        fontFamily="Inter"
-                        lineHeight="1.43"
-                        fontWeight="regular"
-                        fontSize="14px"
-                        color="gray.700"
-                        width="200px"
-                      >
-                        mark@chakra-ui.com
-                      </Text>
-                    </Stack>
-                    <Stack height="52px" alignSelf="stretch" background="white">
-                      <Text
-                        fontFamily="Inter"
-                        lineHeight="1.43"
-                        fontWeight="regular"
-                        fontSize="14px"
-                        color="gray.700"
-                        width="200px"
-                      >
-                        lazar@chakra-ui.com
-                      </Text>
-                    </Stack>
-                    <Stack height="52px" alignSelf="stretch" background="white">
-                      <Text
-                        fontFamily="Inter"
-                        lineHeight="1.43"
-                        fontWeight="regular"
-                        fontSize="14px"
-                        color="gray.700"
-                        width="200px"
-                      >
-                        javi@chakra-ui.com
-                      </Text>
-                    </Stack>
-                  </Stack>
-                </Stack>
-                <Stack
-                  justify="flex-start"
-                  align="flex-start"
-                  spacing="16px"
-                  alignSelf="stretch"
-                >
-                  <chakra.h2 textStyle="h2">
-                    Billing Address
-                  </chakra.h2>
-                  <Stack
-                    justify="flex-start"
-                    align="flex-start"
-                    spacing="24px"
-                    alignSelf="stretch"
-                  >
-                    <Stack
-                      direction="row"
-                      justify="flex-start"
-                      align="flex-start"
-                      spacing="16px"
-                      alignSelf="stretch"
-                    >
-                      <Input
-                        placeholder="Address Line 1"
-                        flex="1"
-                      />
-                    </Stack>
-                    <Stack
-                      direction="row"
-                      justify="flex-start"
-                      align="flex-start"
-                      spacing="16px"
-                      alignSelf="stretch"
-                    >
-                      <Input
-                        placeholder="Address Line 2"
-                        flex="1"
-                      />
-                    </Stack>
-                    <Stack
-                      direction="row"
-                      justify="flex-start"
-                      align="flex-start"
-                      spacing="16px"
-                      alignSelf="stretch"
-                    >
-                      <Input
-                        placeholder="Placeholder"
-                        flex="1"
-                      />
-                      <Input
-                        placeholder="Placeholder"
-                        flex="1"
-                      />
-                    </Stack>
-                    <Stack
-                      direction="row"
-                      justify="flex-start"
-                      align="flex-start"
-                      spacing="16px"
-                      alignSelf="stretch"
-                    >
-                      <Input
-                        placeholder="Placeholder"
-                        flex="1"
-                      />
-                      <Input
-                        placeholder="Placeholder"
-                        flex="1"
-                      />
-                    </Stack>
-                  </Stack>
-                </Stack>
-                <Stack
-                  justify="flex-start"
-                  align="flex-start"
-                  spacing="16px"
-                  alignSelf="stretch"
-                >
-                  <chakra.h2 textStyle="h2">
-                    Summer House Address
-                  </chakra.h2>
-                  <Stack
-                    justify="flex-start"
-                    align="flex-start"
-                    spacing="24px"
-                    alignSelf="stretch"
-                  >
-                    <Stack
-                      direction="row"
-                      justify="flex-start"
-                      align="flex-start"
-                      spacing="16px"
-                      alignSelf="stretch"
-                    >
-                      <Input
-                        placeholder="Address Line 1"
-                        flex="1"
-                      />
-                    </Stack>
-                    <Stack
-                      direction="row"
-                      justify="flex-start"
-                      align="flex-start"
-                      spacing="16px"
-                      alignSelf="stretch"
-                    >
-                      <Input
-                        placeholder="Address Line 2"
-                        flex="1"
-                      />
-                    </Stack>
-                    <Stack
-                      direction="row"
-                      justify="flex-start"
-                      align="flex-start"
-                      spacing="16px"
-                      alignSelf="stretch"
-                    >
-                      <Input
-                        placeholder="Placeholder"
-                        flex="1"
-                      />
-                      <Input
-                        placeholder="Placeholder"
-                        flex="1"
-                      />
-                    </Stack>
-                    <Stack
-                      direction="row"
-                      justify="flex-start"
-                      align="flex-start"
-                      spacing="16px"
-                      alignSelf="stretch"
-                    >
-                      <Input
-                        placeholder="Placeholder"
-                        flex="1"
-                      />
-                      <Input
-                        placeholder="Placeholder"
-                        flex="1"
-                      />
-                    </Stack>
-                  </Stack>
+                  <HStack margin="16px 0" alignSelf="stretch" justify="flex-start">
+                    <Button>Register</Button>
+                  </HStack>
                 </Stack>
               </Stack>
             </Stack>

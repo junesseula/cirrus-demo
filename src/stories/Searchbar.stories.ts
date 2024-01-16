@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ciButton } from './Button';
+import { CiSearchBar } from './Searchbar';
 import { theme } from "@chakra-ui/theme"
 import { getThemingArgTypes } from "@chakra-ui/storybook-addon"
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
-  title: "Components / Forms / Button",
-  component: ciButton,
+  title: "Components / Forms / Input / Searchbar",
+  component: CiSearchBar,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     // layout: 'centered',
@@ -17,20 +17,15 @@ const meta = {
   // argTypes: {
   //   backgroundColor: { control: 'color' },
   // },
-} satisfies Meta<typeof ciButton>;
+} satisfies Meta<typeof CiSearchBar>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const basic: Story = {
+// More on writincg stories with args: https://storybook.js.org/docs/writing-stories/args
+export const Default: Story = {
   args: {
-    buttonLabel: 'Basic Button',
-    variant: 'solid',
-    size: 'sm',
+    bg: "grey",
   },
 };
-basic.argTypes = {
-  ...getThemingArgTypes(theme, "Button"),
-  buttonLabel: { type: "string" },
-}
+

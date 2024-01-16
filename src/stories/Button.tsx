@@ -29,14 +29,14 @@ export default {
 } as Meta
 
 interface StoryProps extends ThemingProps<"Button"> {
-  children?: React.ReactNode,
+  buttonLabel?: React.ReactNode,
   tsVariant?: {
     options: ["with-shadow"],
     control: {type: 'select'}
   }
 }
 
-export const basicButton: StoryFn<StoryProps> = (props) => <Button {...props} />
+export const ciButton: StoryFn<StoryProps> = (props) => <Button {...props}>{props.buttonLabel ? props.buttonLabel : ''}</Button>
 
 // export const outlines: StoryFn<StoryProps> = (props) => (
 //   <>
