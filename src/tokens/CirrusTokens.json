@@ -1688,14 +1688,6 @@
   },
   "mapped/mobile": {},
   "mapped/comfortable": {},
-  "mapped/scale-changing-test": {
-    "size": {
-      "scale": {
-        "value": "12",
-        "type": "sizing"
-      }
-    }
-  },
   "component / text field": {
     "comp": {
       "textfield": {
@@ -1737,7 +1729,6 @@
       "mapped/large",
       "mapped/mobile",
       "mapped/comfortable",
-      "mapped/scale-changing-test",
       "component / text field"
     ]
   }
