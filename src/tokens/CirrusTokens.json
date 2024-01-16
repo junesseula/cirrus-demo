@@ -1873,181 +1873,6 @@
         "width": "1"
       },
       "type": "border"
-    }
-  },
-  "mapped/dark": {
-    "text": {
-      "default": {
-        "value": "{neutral.lightest}",
-        "type": "color"
-      },
-      "secondary": {
-        "value": "{neutral.medium-dark}",
-        "type": "color",
-        "$extensions": {
-          "studio.tokens": {
-            "modify": {
-              "type": "darken",
-              "value": "0.1",
-              "space": "lch"
-            }
-          }
-        }
-      },
-      "inverted": {
-        "value": "{neutral.darkest}",
-        "type": "color"
-      },
-      "error": {
-        "value": "{error.dark}",
-        "type": "color"
-      }
-    },
-    "boarder": {
-      "default": {
-        "value": "{neutral.darker}",
-        "type": "color"
-      },
-      "input-filled": {
-        "value": "{neutral.lighter}",
-        "type": "color"
-      },
-      "error": {
-        "value": "{error.dark}",
-        "type": "color"
-      },
-      "success": {
-        "value": "{success.light}",
-        "type": "color"
-      },
-      "warning": {
-        "value": "{warning.primary}",
-        "type": "color"
-      },
-      "active": {
-        "value": "{brand.agnostic.blue-light}",
-        "type": "color"
-      },
-      "divider": {
-        "value": "{neutral.dark}",
-        "type": "color"
-      },
-      "focus": {
-        "value": "{brand.agnostic.blue-default}",
-        "type": "color"
-      }
-    },
-    "surface": {
-      "primary": {
-        "value": "{neutral.darkest}",
-        "type": "color",
-        "description": "Grey-0 cards, form, default"
-      },
-      "secondary": {
-        "value": "{neutral.darker}",
-        "type": "color",
-        "description": "Grey-15. input fields, dark table row"
-      },
-      "tertiary": {
-        "value": "{neutral.darkII}",
-        "type": "color",
-        "description": "Grey-25. messaging, accordion, table header portal"
-      },
-      "hover": {
-        "value": "{neutral.dark}",
-        "type": "color",
-        "$extensions": {
-          "studio.tokens": {
-            "modify": {
-              "type": "darken",
-              "value": "0.3",
-              "space": "lch"
-            }
-          }
-        },
-        "description": "Grey-35"
-      },
-      "disabled": {
-        "value": "{neutral.darker}",
-        "type": "color",
-        "$extensions": {
-          "studio.tokens": {
-            "modify": {
-              "type": "darken",
-              "value": "0.4",
-              "space": "lch"
-            }
-          }
-        },
-        "description": "Grey-40"
-      },
-      "canvas": {
-        "value": "{canvas.dark}",
-        "type": "color"
-      },
-      "brand-highlight": {
-        "value": "{brand.primary.lightest}",
-        "type": "color"
-      },
-      "brand-highlight-hover": {
-        "value": "{brand.primary.lighter}",
-        "type": "color"
-      },
-      "brand-action": {
-        "value": "{brand.primary.medium}",
-        "type": "color"
-      },
-      "brand-action-hover": {
-        "value": "{brand.primary.medium}",
-        "type": "color",
-        "$extensions": {
-          "studio.tokens": {
-            "modify": {
-              "type": "darken",
-              "value": "0.2",
-              "space": "lch"
-            }
-          }
-        }
-      },
-      "error": {
-        "value": "{error.lightest}",
-        "type": "color"
-      },
-      "success": {
-        "value": "{success.lighter}",
-        "type": "color"
-      },
-      "warning": {
-        "value": "{warning.lighter}",
-        "type": "color"
-      },
-      "danger-light": {
-        "value": "{error.lighter}",
-        "type": "color"
-      },
-      "danger": {
-        "value": "{error.primary}",
-        "type": "color"
-      },
-      "danger-hover": {
-        "value": "{error.primary}",
-        "type": "color",
-        "$extensions": {
-          "studio.tokens": {
-            "modify": {
-              "type": "darken",
-              "value": "0.2",
-              "space": "lch"
-            }
-          }
-        }
-      },
-      "platform-header": {
-        "value": "{neutral.lighter}",
-        "type": "color",
-        "description": "Grey-10"
-      }
     },
     "typography": {
       "ui": {
@@ -2264,6 +2089,181 @@
           },
           "type": "typography"
         }
+      }
+    }
+  },
+  "mapped/dark": {
+    "text": {
+      "default": {
+        "value": "{neutral.lightest}",
+        "type": "color"
+      },
+      "secondary": {
+        "value": "{neutral.medium-dark}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "0.1",
+              "space": "lch"
+            }
+          }
+        }
+      },
+      "inverted": {
+        "value": "{neutral.darkest}",
+        "type": "color"
+      },
+      "error": {
+        "value": "{error.dark}",
+        "type": "color"
+      }
+    },
+    "boarder": {
+      "default": {
+        "value": "{neutral.darker}",
+        "type": "color"
+      },
+      "input-filled": {
+        "value": "{neutral.lighter}",
+        "type": "color"
+      },
+      "error": {
+        "value": "{error.dark}",
+        "type": "color"
+      },
+      "success": {
+        "value": "{success.light}",
+        "type": "color"
+      },
+      "warning": {
+        "value": "{warning.primary}",
+        "type": "color"
+      },
+      "active": {
+        "value": "{brand.agnostic.blue-light}",
+        "type": "color"
+      },
+      "divider": {
+        "value": "{neutral.dark}",
+        "type": "color"
+      },
+      "focus": {
+        "value": "{brand.agnostic.blue-default}",
+        "type": "color"
+      }
+    },
+    "surface": {
+      "primary": {
+        "value": "{neutral.darkest}",
+        "type": "color",
+        "description": "Grey-0 cards, form, default"
+      },
+      "secondary": {
+        "value": "{neutral.darker}",
+        "type": "color",
+        "description": "Grey-15. input fields, dark table row"
+      },
+      "tertiary": {
+        "value": "{neutral.darkII}",
+        "type": "color",
+        "description": "Grey-25. messaging, accordion, table header portal"
+      },
+      "hover": {
+        "value": "{neutral.dark}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "0.3",
+              "space": "lch"
+            }
+          }
+        },
+        "description": "Grey-35"
+      },
+      "disabled": {
+        "value": "{neutral.darker}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "0.4",
+              "space": "lch"
+            }
+          }
+        },
+        "description": "Grey-40"
+      },
+      "canvas": {
+        "value": "{canvas.dark}",
+        "type": "color"
+      },
+      "brand-highlight": {
+        "value": "{brand.primary.lightest}",
+        "type": "color"
+      },
+      "brand-highlight-hover": {
+        "value": "{brand.primary.lighter}",
+        "type": "color"
+      },
+      "brand-action": {
+        "value": "{brand.primary.medium}",
+        "type": "color"
+      },
+      "brand-action-hover": {
+        "value": "{brand.primary.medium}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "0.2",
+              "space": "lch"
+            }
+          }
+        }
+      },
+      "error": {
+        "value": "{error.lightest}",
+        "type": "color"
+      },
+      "success": {
+        "value": "{success.lighter}",
+        "type": "color"
+      },
+      "warning": {
+        "value": "{warning.lighter}",
+        "type": "color"
+      },
+      "danger-light": {
+        "value": "{error.lighter}",
+        "type": "color"
+      },
+      "danger": {
+        "value": "{error.primary}",
+        "type": "color"
+      },
+      "danger-hover": {
+        "value": "{error.primary}",
+        "type": "color",
+        "$extensions": {
+          "studio.tokens": {
+            "modify": {
+              "type": "darken",
+              "value": "0.2",
+              "space": "lch"
+            }
+          }
+        }
+      },
+      "platform-header": {
+        "value": "{neutral.lighter}",
+        "type": "color",
+        "description": "Grey-10"
       }
     }
   },
