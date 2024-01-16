@@ -2036,8 +2036,7 @@
       "name": "global",
       "$figmaStyleReferences": {},
       "selectedTokenSets": {
-        "global": "enabled",
-        "mapped/desktop": "disabled"
+        "global": "enabled"
       }
     },
     {
@@ -2046,8 +2045,7 @@
       "$figmaStyleReferences": {},
       "selectedTokenSets": {
         "alias/platform": "enabled",
-        "global": "source",
-        "mapped/desktop": "disabled"
+        "global": "source"
       },
       "group": "alias"
     },
@@ -2057,8 +2055,7 @@
       "$figmaStyleReferences": {},
       "selectedTokenSets": {
         "alias/portal": "enabled",
-        "global": "source",
-        "mapped/desktop": "disabled"
+        "global": "source"
       },
       "group": "alias"
     },
@@ -2071,8 +2068,7 @@
         "alias/portal": "source",
         "alias/platform": "source",
         "alias": "source",
-        "global": "source",
-        "mapped/desktop": "disabled"
+        "global": "source"
       },
       "group": "mapped"
     },
@@ -2085,8 +2081,7 @@
         "alias/portal": "source",
         "alias/platform": "source",
         "alias": "source",
-        "global": "source",
-        "mapped/desktop": "disabled"
+        "global": "source"
       },
       "group": "mapped"
     }
