@@ -1356,6 +1356,16 @@
               "letterSpacing": "{letter-spacing.default}"
             },
             "type": "typography"
+          },
+          "tertiary": {
+            "value": {
+              "fontFamily": "{Inter}",
+              "fontWeight": "{font-weight.400}",
+              "fontSize": "{font-size.ui.l}",
+              "lineHeight": "{line-height.125}",
+              "letterSpacing": "{letter-spacing.default}"
+            },
+            "type": "typography"
           }
         },
         "xs": {
