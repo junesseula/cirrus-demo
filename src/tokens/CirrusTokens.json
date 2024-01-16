@@ -1347,10 +1347,32 @@
             },
             "type": "typography"
           }
+        },
+        "xs": {
+          "primary": {
+            "value": {
+              "fontFamily": "{Inter}",
+              "fontWeight": "{font-weight.600}",
+              "fontSize": "{font-size.ui.xs}",
+              "lineHeight": "{line-height.125}",
+              "letterSpacing": "{letter-spacing.default}"
+            },
+            "type": "typography"
+          },
+          "secondary": {
+            "value": {
+              "fontFamily": "{Inter}",
+              "fontWeight": "{font-weight.500}",
+              "fontSize": "{font-size.ui.xs}",
+              "lineHeight": "{line-height.125}",
+              "letterSpacing": "{letter-spacing.default}"
+            },
+            "type": "typography"
+          }
         }
       },
       "heading": {
-        "l": {
+        "s": {
           "value": {
             "fontFamily": "{font-family.product}",
             "fontWeight": "{font-weight.600}",
@@ -1372,7 +1394,7 @@
           },
           "type": "typography"
         },
-        "s": {
+        "l": {
           "value": {
             "fontFamily": "{font-family.product}",
             "fontWeight": "{font-weight.600}",
@@ -1380,6 +1402,76 @@
             "lineHeight": "{line-height.big-type.m}",
             "letterSpacing": "{letter-spacing.default}",
             "paragraphSpacing": "{paragraph-spacing.default}"
+          },
+          "type": "typography"
+        }
+      },
+      "body": {
+        "s": {
+          "value": {
+            "fontFamily": "{font-family.product}",
+            "fontWeight": "{font-weight.400}",
+            "fontSize": "{font-size.body.s}",
+            "lineHeight": "{line-height.small-type.l}",
+            "letterSpacing": "{letter-spacing.default}",
+            "paragraphSpacing": "{paragraph-spacing.default}"
+          },
+          "type": "typography"
+        },
+        "m": {
+          "value": {
+            "fontFamily": "{font-family.product}",
+            "fontWeight": "{font-weight.400}",
+            "fontSize": "{font-size.body.m}",
+            "lineHeight": "{line-height.small-type.l}",
+            "letterSpacing": "{letter-spacing.default}",
+            "paragraphSpacing": "{paragraph-spacing.default}"
+          },
+          "type": "typography"
+        },
+        "l": {
+          "value": {
+            "fontFamily": "{font-family.product}",
+            "fontWeight": "{font-weight.400}",
+            "fontSize": "{font-size.body.l}",
+            "lineHeight": "{line-height.small-type.l}",
+            "letterSpacing": "{letter-spacing.default}",
+            "paragraphSpacing": "{paragraph-spacing.default}"
+          },
+          "type": "typography"
+        }
+      },
+      "display": {
+        "s": {
+          "value": {
+            "fontFamily": "{font-family.product}",
+            "fontWeight": "{font-weight.600}",
+            "fontSize": "{font-size.display.s}",
+            "lineHeight": "{line-height.big-type.s}",
+            "letterSpacing": "{letter-spacing.default}",
+            "paragraphSpacing": "{paragraph-spacing.scaled.125}"
+          },
+          "type": "typography"
+        },
+        "m": {
+          "value": {
+            "fontFamily": "{font-family.product}",
+            "fontWeight": "{font-weight.600}",
+            "fontSize": "{font-size.display.m}",
+            "lineHeight": "{line-height.big-type.m}",
+            "letterSpacing": "{letter-spacing.default}",
+            "paragraphSpacing": "{paragraph-spacing.scaled.125}"
+          },
+          "type": "typography"
+        },
+        "l": {
+          "value": {
+            "fontFamily": "{font-family.product}",
+            "fontWeight": "{font-weight.600}",
+            "fontSize": "{font-size.body.l}",
+            "lineHeight": "{line-height.big-type.m}",
+            "letterSpacing": "{letter-spacing.default}",
+            "paragraphSpacing": "{paragraph-spacing.scaled.125}"
           },
           "type": "typography"
         }
