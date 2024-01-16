@@ -2028,24 +2028,7 @@
       "type": "border"
     }
   },
-  "mapped/large": {
-    "core": {
-      "size": {
-        "base": {
-          "value": "{size.scale} *1.25",
-          "type": "sizing"
-        }
-      }
-    },
-    "global": {
-      "font-size": {
-        "REM": {
-          "value": "20",
-          "type": "fontSizes"
-        }
-      }
-    }
-  },
+  "mapped/desktop": {},
   "mapped/mobile": {},
   "$themes": [
     {
@@ -2053,7 +2036,8 @@
       "name": "global",
       "$figmaStyleReferences": {},
       "selectedTokenSets": {
-        "global": "enabled"
+        "global": "enabled",
+        "mapped/desktop": "disabled"
       }
     },
     {
@@ -2062,7 +2046,8 @@
       "$figmaStyleReferences": {},
       "selectedTokenSets": {
         "alias/platform": "enabled",
-        "global": "source"
+        "global": "source",
+        "mapped/desktop": "disabled"
       },
       "group": "alias"
     },
@@ -2072,7 +2057,8 @@
       "$figmaStyleReferences": {},
       "selectedTokenSets": {
         "alias/portal": "enabled",
-        "global": "source"
+        "global": "source",
+        "mapped/desktop": "disabled"
       },
       "group": "alias"
     },
@@ -2085,7 +2071,8 @@
         "alias/portal": "source",
         "alias/platform": "source",
         "alias": "source",
-        "global": "source"
+        "global": "source",
+        "mapped/desktop": "disabled"
       },
       "group": "mapped"
     },
@@ -2098,7 +2085,8 @@
         "alias/portal": "source",
         "alias/platform": "source",
         "alias": "source",
-        "global": "source"
+        "global": "source",
+        "mapped/desktop": "disabled"
       },
       "group": "mapped"
     }
@@ -2111,7 +2099,7 @@
       "alias/portal",
       "mapped/ light",
       "mapped/dark",
-      "mapped/large",
+      "mapped/desktop",
       "mapped/mobile"
     ]
   }
