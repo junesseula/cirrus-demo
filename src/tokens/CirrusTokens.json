@@ -1085,6 +1085,12 @@
       "default": {
         "value": "{paragraph-spacing.scaled.0}",
         "type": "paragraphSpacing"
+      },
+      "body": {
+        "m": {
+          "value": "{paragraph-spacing.scaled.75}",
+          "type": "paragraphSpacing"
+        }
       }
     }
   },
@@ -1451,7 +1457,7 @@
             "fontSize": "{font-size.body.m}",
             "lineHeight": "{line-height.small-type.m}",
             "letterSpacing": "{letter-spacing.default}",
-            "paragraphSpacing": "{paragraph-spacing.default}"
+            "paragraphSpacing": "{paragraph-spacing.body.m}"
           },
           "type": "typography"
         },
